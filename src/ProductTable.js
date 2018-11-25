@@ -5,11 +5,14 @@ import SortableColumnHeader from './SortableColumnHeader'
 class ProductTable extends Component {
     render() {
         let productsAsArray = Object.keys(this.props.products).map((pid) => this.props.products[pid]);
-        let rows = productsAsArray.map((product) => {
-            return (
-                <ProductRow product={product} key={product.id} />
-            )
-        });
+        let rows = []
+
+        productsAsArray.forEach((product) => {
+            rows.push(
+              <ProductRow product={product} key={product.id} ></ProductRow>
+            );
+          });
+          console.log(rows);
         return (
             <table>
                 <thead>
@@ -19,7 +22,7 @@ class ProductTable extends Component {
                     </tr>
                 </thead>
                 <tbody>
-
+                    { rows }
                 </tbody>
             </table>
         );

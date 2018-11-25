@@ -8,10 +8,10 @@ class ProductRow extends Component {
                 <td>
                 <span className={this.props.product.stocked ? '' : 'ProductRow-out-of-stock'}>
                     {this.props.product.name}
-                </span>>
+                </span>
                 </td>
                 <td>
-                    {this.product.price}
+                    {this.props.product.price}
                 </td>
                 <td>
                 <button onClick={this.destroy} style={{color: 'red'}}>x</button>

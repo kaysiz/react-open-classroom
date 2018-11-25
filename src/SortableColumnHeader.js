@@ -6,8 +6,8 @@ class SortableColumnHeader extends Component {
         return (
             <th>
                 {this.props.column}
-                <button className="SortableColumnHeader">&#x25B2</button>
-                <button>&#x25BC</button>
+                <button className="SortableColumnHeader-current">&#x25B2;</button>
+                <button>&#x25BC;</button>
             </th>
         );
     }
